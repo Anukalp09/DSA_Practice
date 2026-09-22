@@ -1,0 +1,44 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int marks[]=new int[n];
+	for(int i=0;i<n;i++){
+	    marks[i]=sc.nextInt();
+	}
+	ArrayList<Integer>list=new ArrayList<>();
+	for(int i=0;i<n;i++){
+	    list.add(marks[i]);
+	}
+	System.out.println("All= "+list+" ");
+	
+	   System.out.print("even = ");
+	for(int i=0;i<list.size();i+=2){
+	    System.out.print(list.get(i)+" ");
+	}
+	System.out.println();
+	int k=sc.nextInt();
+	if(list.contains(k)){
+	    System.out.println("found at = "+list.indexOf(k));
+	}
+	else{
+	    System.out.println("not found");
+	}
+	int update=sc.nextInt();
+	list.set(3,update);
+	System.out.println("updated = "+list);
+	list.remove(4);
+	System.out.println(list);
+	System.out.println(list.size());
+	
+	int highest = Collections.max(list);
+    int lowest = Collections.min(list);
+
+    System.out.println("Highest marks = " + highest);
+    System.out.println("Lowest marks = " + lowest);
+
+}
+}
