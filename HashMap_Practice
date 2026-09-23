@@ -1,0 +1,94 @@
+
+import java.util.*;
+import java.util.HashMap;
+public class Main
+{
+	public static void main(String[] args) {
+	//	System.out.println("Hello World");
+	Scanner sc = new Scanner(System.in);
+	// Q1
+	HashMap<Integer,String> map = new HashMap<>();
+	HashMap<Integer,String> map1 = new HashMap<>();
+	
+	map.put(101,"Laptop");
+	map.put(105,"Keyboard");
+	map.put(103,"Mouse");
+	map.put(108,"Monitor");
+	map.put(102,"Headphones");
+	map.put(110,"Webcam");
+	map.put(104,"Printer");
+	map.put(107,"Speaker");
+	System.out.println(map);
+	// Q2
+	int nID=sc.nextInt();
+	String nPROD=sc.next();
+	map.put(nID,nPROD);
+	System.out.println(map);	
+	//Q3
+	map.putIfAbsent(101,"GPU");
+	map.putIfAbsent(109,"GPU");
+	System.out.println(map);
+	//Q4
+	int k=sc.nextInt();
+	if(map.containsKey(k)){
+	System.out.println(map.get(k));	    
+	}
+	//Q5
+	String p=sc.next();
+	if(map.containsValue(p)){
+	System.out.println("Exists!!");	    
+	}
+	//Q6
+	int o=sc.nextInt();
+	String r=sc.next();
+	map.replace(o,r);
+	System.out.println(map);
+    //Q7
+    int id=sc.nextInt();
+    String Oprod=sc.next();
+    String Nprod=sc.next();
+    map.replace(id,Oprod,Nprod);
+	System.out.println(map);
+    //Q8
+    int newProdId=sc.nextInt();
+    map.remove(newProdId);
+    //Q9
+    int newK=sc.nextInt();
+    String newV=sc.next();
+    map.remove(newK,newV);
+    //Q10
+    System.out.println(map.keySet());
+    //Q11
+    System.out.println(map.values());
+    //Q12
+    for(var entry:map.entrySet()){
+        System.out.println(entry.getKey()+"->"+entry.getValue());
+    }
+    //Q13
+    System.out.println(map.size());
+    //Q14
+    if(map.isEmpty()){
+        System.out.println("Inventory is empty.");
+    }
+    else{
+         System.out.println("Inventory contains products.");
+    }
+    if(map1.isEmpty()){
+         System.out.println("Inventory is empty.");
+    }
+    else{
+         System.out.println("Inventory contains products.");
+    }
+	}
+}
+	  
+    
+    
+    
+    
+    
+    
+   
+    
+
+	
